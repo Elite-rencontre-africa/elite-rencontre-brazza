@@ -96,9 +96,7 @@ function afficherPagePaiement(messageWhatsApp) {
                     <div class="label">📱 Numéro de paiement</div>
                     <div class="numero">${NUMERO_PAIEMENT}</div>
                     <div class="operateurs">
-                        <span class="operateur-badge">MTN MoMo</span>
                         <span class="operateur-badge">Airtel Money</span>
-                        <span class="operateur-badge">Orange Money</span>
                     </div>
                 </div>
 
