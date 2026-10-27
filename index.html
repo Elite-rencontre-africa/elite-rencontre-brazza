@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Agence Matrimoniale Élite Rencontre</title>
+    <link rel="stylesheet" href="accueil.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AGENCE MATRIMONIALE</h1>
+            <h2>ÉLITE RENCONTRE</h2>
+            <p class="subtitle">Trouvez votre âme sœur en toute confiance</p>
+        </header>
+
+        <form id="inscriptionForm">
+            <h3>Formulaire d'inscription</h3>
+
+            <div class="form-group">
+                <label for="nom">Nom complet </label>
+                <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Adresse email </label>
+                <input type="email" id="email" name="email" required placeholder="exemple@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone *</label>
+                <input type="tel" id="telephone" name="telephone" required placeholder="+237 6XX XXX XXX">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Âge </label>
+                <input type="number" id="age" name="age" min="18" max="99" required placeholder="Votre âge">
+            </div>
+
+            <div class="form-group">
+                <label for="sexe">Sexe </label>
+                <select id="sexe" name="sexe" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option value="homme">Homme</option>
+                    <option value="femme">Femme</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ville">Ville </label>
+                <input type="text" id="ville" name="ville" required placeholder="Votre ville">
+            </div>
+
+            <div class="form-group">
+                <label for="profession">Profession</label>
+                <input type="text" id="profession" name="profession" placeholder="Votre profession">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Parlez-nous de vous</label>
+                <textarea id="message" name="message" rows="4" placeholder="Vos centres d'intérêt, votre vision du couple..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Valider mon inscription</button>
+        </form>
+
+        <footer>
+            <p>&copy; 2024 Élite Rencontre Brazaville - Tous droits réservés</p>
+        </footer>
+    </div>
+
+    <script src="accueil.js"></script>
+</body>
+</html>
