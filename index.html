@@ -5,55 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - Agence Matrimoniale Élite Rencontre</title>
     <link rel="stylesheet" href="accueil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Drapeaux décoratifs en haut -->
+    <div class="top-flags">
+        <div class="flag-item">
+            <span class="flag">🇨🇬</span>
+            <span class="flag-label">Congo-Brazzaville</span>
+        </div>
+        <div class="divider-flag">✦</div>
+        <div class="flag-item">
+            <span class="flag">🇨🇩</span>
+            <span class="flag-label">Congo-Kinshasa</span>
+        </div>
+    </div>
+
     <div class="container">
         <header>
+            <div class="logo-badge">💍</div>
             <h1>AGENCE MATRIMONIALE</h1>
             <h2>ÉLITE RENCONTRE</h2>
-            <p class="subtitle">Trouvez votre âme sœur en toute confiance</p>
+            <p class="subtitle">L'excellence des rencontres sérieuses au Congo</p>
+            <div class="header-flags">
+                <span>🇨🇬</span>
+                <span class="sep">•</span>
+                <span>🇨🇩</span>
+            </div>
         </header>
 
+        <div class="trust-bar">
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span>100% Sérieux</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🔒</span>
+                <span>Confidentiel</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💎</span>
+                <span>Élite</span>
+            </div>
+        </div>
+
         <form id="inscriptionForm">
-            <h3>Formulaire d'inscription</h3>
+            <h3>✨ Formulaire d'inscription ✨</h3>
+            <p class="form-intro">Remplissez ce formulaire pour rejoindre notre cercle de célibataires d'élite.</p>
 
-            <div class="form-group">
-                <label for="nom">Nom complet </label>
-                <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nom">Nom complet *</label>
+                    <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Âge *</label>
+                    <input type="number" id="age" name="age" min="18" max="99" required placeholder="Âge">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="email">Adresse email </label>
-                <input type="email" id="email" name="email" required placeholder="exemple@email.com">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Adresse email *</label>
+                    <input type="email" id="email" name="email" required placeholder="exemple@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required placeholder="+242 / +243 ...">
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="telephone">Numéro de téléphone *</label>
-                <input type="tel" id="telephone" name="telephone" required placeholder="+237 6XX XXX XXX">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sexe">Sexe *</label>
+                    <select id="sexe" name="sexe" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="homme">Homme</option>
+                        <option value="femme">Femme</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pays">Pays *</label>
+                    <select id="pays" name="pays" required>
+                        <option value="">-- Sélectionner --</option>
+                        <option value="Congo-Brazzaville">🇨🇬 Congo-Brazzaville</option>
+                        <option value="Congo-Kinshasa">🇨🇩 Congo-Kinshasa</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="age">Âge </label>
-                <input type="number" id="age" name="age" min="18" max="99" required placeholder="Votre âge">
-            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ville">Ville *</label>
+                    <input type="text" id="ville" name="ville" required placeholder="Votre ville">
+                </div>
 
-            <div class="form-group">
-                <label for="sexe">Sexe </label>
-                <select id="sexe" name="sexe" required>
-                    <option value="">-- Sélectionner --</option>
-                    <option value="homme">Homme</option>
-                    <option value="femme">Femme</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="ville">Ville </label>
-                <input type="text" id="ville" name="ville" required placeholder="Votre ville">
-            </div>
-
-            <div class="form-group">
-                <label for="profession">Profession</label>
-                <input type="text" id="profession" name="profession" placeholder="Votre profession">
+                <div class="form-group">
+                    <label for="profession">Profession</label>
+                    <input type="text" id="profession" name="profession" placeholder="Votre profession">
+                </div>
             </div>
 
             <div class="form-group">
@@ -61,11 +115,25 @@
                 <textarea id="message" name="message" rows="4" placeholder="Vos centres d'intérêt, votre vision du couple..."></textarea>
             </div>
 
-            <button type="submit" class="btn-submit">Valider mon inscription</button>
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="conditions" required>
+                    <span>J'accepte les <a href="#" class="link">conditions générales</a> et la politique de confidentialité *</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <span>💎 Valider mon inscription</span>
+            </button>
+
+            <p class="form-note">
+                🔒 Vos informations restent strictement confidentielles
+            </p>
         </form>
 
         <footer>
-            <p>&copy; 2024 Élite Rencontre Brazaville - Tous droits réservés</p>
+            <p>&copy; 2025 Élite Rencontre — Agence Matrimoniale de Prestige</p>
+            <p class="footer-sub">🇨🇬 Congo-Brazzaville • 🇨🇩 Congo-Kinshasa</p>
         </footer>
     </div>
 
